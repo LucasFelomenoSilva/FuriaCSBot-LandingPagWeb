@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FuriaGG - Chat Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/pt/f/f9/Furia_Esports_logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <main class="main-content">
+    <div class="card">
+      <h1>Conheça o Chatbot da FURIA</h1>
+      <p>Receba atualizações da equipe, próximos jogos, resultados e muito mais!</p>
+
+      <a href="https://www.furia.gg/" target="_blank">
+        <img class="logo-card" src="https://upload.wikimedia.org/wikipedia/pt/f/f9/Furia_Esports_logo.png" alt="Logotipo Furia">
+      </a>
+
+      <div class="buttons">
+        <a href="https://t.me/furiagg_csbot" target="_blank" class="btn primary social-icon">
+          Acessar o Bot no Telegram <i class="fab fa-telegram"></i>
+        </a>
+        <a href="#" id="abrir-chat" class="btn primary social-icon">
+          Usar o Chat Web <i class="fa fa-comments"></i>
+        </a>
+        <a href="https://github.com/LucasFelomenoSilva/FuriaCSBot-Telegram" target="_blank" class="btn secondary social-icon">
+          Ver código no GitHub <i class="fa fa-code"></i>
+        </a>
+      </div>
+    </div>
+
+    <div id="chat-web" class="card" style="display: none;">
+      <div class="chat-header">
+        <button id="voltar" class="back-button"><i class="fas fa-arrow-left"></i></button>
+        <h2>Chat com o Bot da FURIA</h2>
+      </div>
+
+      <div id="messages" class="chat-messages"></div>
+      <div id="opcoes" class="quick-questions"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Feito por Lucas Felomeno Silva ®</p>
+    <a href="https://github.com/LucasFelomenoSilva" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/lucas-felomeno-silva/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+    <a href="https://x.com/luscassilvaz" target="_blank" class="social-icon"><i class="fab fa-x"></i></a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
