@@ -310,3 +310,74 @@ header {
   33%  { content: ".."; }
   66%  { content: "..."; }
 }
+
+.user-message {
+  text-align: right;
+  margin: 0.5rem 0;
+  color: #000;
+  background-color: #dcdcdc;
+  padding: 0.6rem;
+  border-radius: 12px;
+  max-width: 80%;
+  margin-left: auto;
+}
+
+.bot-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0.5rem 0;
+  background-color: #e9e9e9;
+  color: #000;
+  padding: 0.6rem;
+  border-radius: 12px;
+  max-width: 80%;
+}
+
+.bot-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.animated {
+  animation: fadeInChat 0.5s ease-out;
+}
+
+@keyframes fadeInChat {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.send-button {
+  background-color: #9b30ff;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #7d1fd1;
+}
