@@ -1,15 +1,29 @@
+:root {
+  --primary-color: #9b30ff;
+  --primary-hover: #7d1fd1;
+  --background-dark: #0d0d0d;
+  --background-card: #1a1a1a;
+  --background-light: #f9f9f9;
+  --text-color: #fff;
+  --text-muted: #ccc;
+  --border-color: #ccc;
+  --secondary-bg: #333;
+  --secondary-hover: #444;
+  --footer-bg: #111;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0d0d0d;
-  color: #fff;
+  background-color: var(--background-dark);
+  color: var(--text-color);
 }
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 1rem 0;
 }
 
@@ -23,17 +37,18 @@ header {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  min-height: calc(95vh - 160px); 
+  min-height: calc(95vh - 160px);
 }
 
 .card {
-  background-color: #1a1a1a;
+  background-color: var(--background-card);
   border-radius: 16px;
   padding: 2rem;
   max-width: 350px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .logo-card {
@@ -47,50 +62,14 @@ header {
   filter: brightness(1.1);
 }
 
-
 .card h1 {
-  color: #fff;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 .card p {
-  color: #ccc;
+  color: var(--text-muted);
   margin-bottom: 2rem;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn {
-  text-decoration: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-.primary {
-  background-color: #9b30ff;
-  color: #fff;
-}
-
-.primary:hover {
-  background-color: #7d1fd1;
-}
-
-.secondary {
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #555;
-}
-
-.secondary:hover {
-  background-color: #444;
 }
 
 .buttons {
@@ -113,22 +92,22 @@ header {
 }
 
 .primary {
-  background-color: #9b30ff;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .primary:hover {
-  background-color: #7d1fd1;
+  background-color: var(--primary-hover);
 }
 
 .secondary {
-  background-color: #333;
-  color: #fff;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
   border: 1px solid #555;
 }
 
 .secondary:hover {
-  background-color: #444;
+  background-color: var(--secondary-hover);
 }
 
 .chat-header {
@@ -156,10 +135,10 @@ header {
   flex-direction: column;
   height: 300px;
   overflow-y: auto;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   padding: 10px;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: var(--background-light);
   margin-bottom: 1rem;
   color: black;
 }
@@ -168,54 +147,54 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .chat-input input {
-  padding: 100px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
 }
 
 .send-button {
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--text-color);
   border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .send-button:hover {
-  background-color: #111;
+  background-color: var(--primary-hover);
 }
-
 
 .footer {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #111;
-  color: #ccc;
+  background-color: var(--footer-bg);
+  color: var(--text-muted);
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
   z-index: 100;
+  animation: fadeInUp 1.2s ease-out;
 }
 
 .footer a {
-  color: #ffffff;
+  color: var(--text-color);
   margin: 0 0.5rem;
   text-decoration: none;
-  font-size: 1.5rem;  
-  transition: 0.3s;
+  font-size: 1.5rem;
+  transition: color 0.3s;
 }
 
-
 .footer a:hover {
-  text-decoration: none;
-  color: #7d1fd1;
+  color: var(--primary-hover);
 }
 
 .social-icon i {
@@ -223,60 +202,7 @@ header {
 }
 
 .social-icon i:hover {
-  transform: scale(1.2);  
-}
-
-@media (max-width: 768px) {
-  .card {
-    max-width: 90%;
-    padding: 1.5rem;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .btn {
-    width: 90%;
-    padding: 1rem;
-  }
-
-  .footer {
-    font-size: 0.8rem;
-    padding: 1rem 0.5rem;
-  }
-
-  .footer a {
-    font-size: 1.2rem;
-  }
-
-  header {
-    padding: 0.8rem 0;
-  }
-
-  .logo-header {
-    height: 24px;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card {
-  animation: fadeInUp 0.8s ease-out;
-}
-
-.footer {
-  animation: fadeInUp 1.2s ease-out;
+  transform: scale(1.2);
 }
 
 .quick-questions {
@@ -288,8 +214,8 @@ header {
 }
 
 .quick-questions button {
-  background-color: #333;
-  color: white;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
   border: none;
   border-radius: 8px;
   padding: 0.5rem 1rem;
@@ -298,7 +224,7 @@ header {
 }
 
 .quick-questions button:hover {
-  background-color: #555;
+  background-color: var(--secondary-hover);
 }
 
 #digitando::after {
@@ -308,9 +234,9 @@ header {
 }
 
 @keyframes pontinhos {
-  0%   { content: "."; }
-  33%  { content: ".."; }
-  66%  { content: "..."; }
+  0% { content: "."; }
+  33% { content: ".."; }
+  66% { content: "..."; }
 }
 
 .user-message {
@@ -347,6 +273,17 @@ header {
   animation: fadeInChat 0.5s ease-out;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeInChat {
   from {
     opacity: 0;
@@ -358,35 +295,9 @@ header {
   }
 }
 
-.chat-input {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.chat-input input {
-  flex: 1;
-  padding: 0.7rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-.send-button {
-  background-color: #9b30ff;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.send-button:hover {
-  background-color: #7d1fd1;
-}
-
-#messages {
-  margin-bottom: 0.1px;
+.quick-questions button:hover,
+.sugestao:hover {
+  background-color: var(--secondary-hover);
 }
 
 .sugestao {
@@ -405,10 +316,6 @@ header {
   transform: translateY(10px);
 }
 
-.sugestao:hover {
-  background-color: #e0e0e0;
-}
-
 @keyframes slideFadeIn {
   to {
     opacity: 1;
@@ -416,3 +323,36 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .footer a {
+    font-size: 1.2rem;
+  }
+
+  header {
+    padding: 0.8rem 0;
+  }
+
+  .logo-header {
+    height: 24px;
+  }
+}
