@@ -81,7 +81,7 @@ async function enviarMensagem() {
   </div>`;
 
   try {
-    const resposta = await fetch("https://furiacsbot-landingpagweb.onrender.com", {
+    const resposta = await fetch("https://furiacsbot-landingpagweb-production.up.railway.app", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
