@@ -3,6 +3,8 @@
 Bem-vindo ao Chatbot FURIA Esports!
 Este projeto foi desenvolvido com o objetivo de criar uma experiência de atendimento interativa para os fãs da equipe FURIA no cenário de Counter-Strike (CS), combinando frontend moderno e inteligência artificial generativa.
 
+- Acesso o repositório do projeto [Telegram Bot](https://github.com/LucasFelomenoSilva/FuriaCSBot-Telegram)
+
 ---
 
 ## Funcionalidades
@@ -43,6 +45,7 @@ pip install flask python-dotenv google-generativeai flask-cors
 - Certifique-se de que seu backend (app.py) esteja rodando antes de usar o frontend.
 
 - A chave da API Gemini pode ser obtida pela plataforma Google AI.
+
 
 ## Autor
 Lucas Felomeno Silva
