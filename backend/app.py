@@ -31,4 +31,4 @@ def receber_mensagem():
     return jsonify({"resposta": resposta.text})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0", port=os.getenv("PORT", 5000))
